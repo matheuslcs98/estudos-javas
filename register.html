@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-se</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Registrar-se</h1>
+        <nav>
+            <a href="index.html">Página Principal</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <form id="registerForm" onsubmit="handleRegister(event)">
+            <label for="newUsername">Usuário:</label>
+            <input type="text" id="newUsername" required>
+            <label for="newPassword">Senha:</label>
+            <input type="password" id="newPassword" required>
+            <button type="submit">Registrar</button>
+            <div>
+                <input type="checkbox" id="showRegisterPassword"> Mostrar Senha
+                <label for="showRegisterPassword">Mostrar Senha</label>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nossa Página. Todos os direitos reservados ao Matheus.</p>
+    </footer>
+    <script>
+        // Lógica para mostrar/ocultar senha
+        document.getElementById('showRegisterPassword').addEventListener('change', function() {
+            const passwordField = document.getElementById('newPassword');
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+
+        // Função para registrar um novo usuário
+        function handleRegister(event) {
+            event.preventDefault();
+            const username = document.getElementById('newUsername').value;
+            const password = document.getElementById('newPassword').value;
+
+            const existingUser = localStorage.getItem(username);
+            if (existingUser) {
+                alert('Usuário já existe.');
+            } else {
+                const user = { username, password };
+                localStorage.setItem(username, JSON.stringify(user));
+                alert('Usuário registrado com sucesso!');
+                window.location.href = 'login.html'; // Redirecionar para login após registro
+            }
+        }
+    </script>
+</body>
+</html>

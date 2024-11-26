@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('imagens/fundo.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+canvas {
+    border: 2px solid #fff; 
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.tutorial {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 250px; /* Largura da caixa de tutorial */
+}
+
+.tutorial h2 {
+    text-align: center;
+    color: #333;
+}
+
+.tutorial p {
+    color: #555;
+    font-size: 16px;
+}
+/* Estilo para a seção do ranking */
+.ranking {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    border: 2px solid #0077cc; /* Borda azul */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaço acima da caixa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+    text-align: center; /* Centraliza o texto */
+}
+
+.ranking h2 {
+    font-family: 'Arial', sans-serif; /* Fonte do título */
+    color: #0077cc; /* Cor azul */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+#rankingList {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento da lista */
+}
+
+#rankingList li {
+    font-family: 'Arial', sans-serif; /* Fonte para as pontuações */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin: 5px 0; /* Espaçamento entre as linhas */
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="index.html">Página Principal</a>
+            <a href="register.html">Registrar-se</a>
+        </nav>
+    </header>
+    <main>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Entrar</button>
+            <div>
+                <input type="checkbox" id="showPassword"> Mostrar Senha
+                <label for="showPassword">Mostrar Senha</label>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nossa Página. Todos os direitos reservados ao Matheus.</p>
+    </footer>
+    <script>
+        // Lógica para mostrar/ocultar senha
+        document.getElementById('showPassword').addEventListener('change', function() {
+            const passwordField = document.getElementById('password');
+            passwordField.type = this.checked ? 'text' : 'password';
+        });
+
+        // Função para fazer login
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const user = JSON.parse(localStorage.getItem(username));
+            if (user && user.password === password) {
+                alert('Login bem-sucedido!');
+                // Redirecionar para a página do jogo ou onde desejar
+                window.location.href = 'surf.html';
+            } else {
+                alert('Usuário ou senha inválidos.');
+            }
+        }
+    </script>
+</body>
+</html>

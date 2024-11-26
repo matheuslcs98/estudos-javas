@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+}
+
+header {
+    background-color: #000000; /* Cabeçalho preto */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px; /* Aumentar o espaçamento */
+}
+
+nav {
+    margin: 20px 0; /* Espaço acima e abaixo do nav */
+}
+
+nav a {
+    color: #ffffff; /* Texto das abas em branco */
+    text-decoration: none; /* Sem sublinhado */
+    margin: 0 15px; /* Espaço horizontal entre as abas */
+    padding: 10px 20px; /* Espaço dentro das abas */
+    border: 1px solid transparent; /* Para efeito de borda ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+nav a:hover {
+    background-color: #333333; /* Cor do fundo ao passar o mouse */
+    border-color: #ffffff; /* Borda branca ao passar o mouse */
+}
+
+main {
+    padding: 40px; /* Aumentar o espaçamento */
+    max-width: 600px; /* Largura máxima */
+    margin: 20px auto; /* Centralizar e adicionar margem superior */
+    background: #1e1e1e; /* Fundo cinza escuro */
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3); /* Sombras mais sutis */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px; /* Aumentar o espaço acima dos rótulos */
+    font-weight: bold; /* Tornar os rótulos em negrito */
+    color: #ffffff; /* Rótulos em branco */
+}
+
+input {
+    padding: 12px; /* Aumentar o padding */
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Transição suave na borda */
+}
+
+input:focus {
+    border-color: #ffffff; /* Mudança de cor ao focar no campo */
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Espaço acima do container da senha */
+}
+
+button {
+    margin-top: 15px; /* Aumentar o espaço acima do botão */
+    padding: 12px; /* Aumentar o padding */
+    background-color: #000000; /* Botão preto */
+    color: #ffffff; /* Texto do botão em branco */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave para o botão */
+}
+
+button:hover {
+    background-color: #333333; /* Cor do botão ao passar o mouse */
+}
+
+#message {
+    margin-top: 20px; /* Aumentar o espaço acima da mensagem */
+    color: red;
+    text-align: center;
+}
+
+/* Adicionando estilo para imagens */
+.hero {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.hero img {
+    width: 100%; /* Ajustar largura para 100% */
+    height: 300px; /* Altura fixa para manter o aspecto */
+    object-fit: cover; /* Preencher o espaço sem distorção */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com opacidade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h2 {
+    color: #ffffff; /* Texto da sobreposição em branco */
+    font-size: 2em; /* Tamanho da fonte */
+}
+
+footer {
+    text-align: center; /* Centralizar os créditos */
+    padding: 20px 0; /* Espaçamento em cima e embaixo */
+    background-color: #000000; /* Fundo preto para o rodapé */
+    color: #ffffff; /* Texto branco para os créditos */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Largura total */
+}
